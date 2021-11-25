@@ -7,7 +7,10 @@ public class KeyBehaviour : MonoBehaviour
 
     private void OnTriggerEnter(Collider other) 
     {
-        Destroy(gameObject);
-        GameControl.instance.isKeyCollected = true;
+        if (other.tag == "Player")
+        {
+            Destroy(gameObject);
+            GameControl.instance.isKeyCollected = true;
+        }
     }
 }
