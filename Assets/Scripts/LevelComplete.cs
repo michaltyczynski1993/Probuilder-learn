@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class LevelComplete : MonoBehaviour
 {
-  private BoxCollider col;
+  private SphereCollider col;
   private void Awake() 
   {
-    col = GetComponent<BoxCollider>();    
+    col = GetComponent<SphereCollider>();    
   }
   private void OnTriggerEnter(Collider other) 
   {
