@@ -5,16 +5,17 @@ using UnityEngine;
 public class DoorScript : MonoBehaviour
 {
     private BoxCollider colTrigger;
-    [SerializeField] private GameObject particles;
+    private Animator anim;
     void Start()
     {
         colTrigger = GetComponent<BoxCollider>();
+        anim = GetComponent<Animator>();
     }
     private void Update() 
     {
         if (GameControl.instance.isKeyCollected == true)
         {
-            particles.SetActive(true);
+            anim.SetBool("isDoorOpen", true);
         }    
     }
 }
