@@ -29,7 +29,6 @@ public class PausedMenu : MonoBehaviour
     public void Pause()
     {
         //zablokuj kamerę, zablokuj auto corsshair, pokaż kursor, pokaz pause menu, zablokuj ruch gracza
-        Time.timeScale = 0;
         first.cameraCanMove = false;
         first.lockCursor = false;
         first.crosshair = false;
@@ -40,7 +39,6 @@ public class PausedMenu : MonoBehaviour
     }
     public void Resume ()
     {
-        Time.timeScale = 1;
         first.cameraCanMove = true;
         first.lockCursor = true;
         first.crosshair = true;
