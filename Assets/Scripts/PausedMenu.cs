@@ -35,6 +35,7 @@ public class PausedMenu : MonoBehaviour
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
         first.playerCanMove = false;
+        first.enableJump = false;
         pauseMenu.SetActive(true);
     }
     public void Resume ()
@@ -45,6 +46,7 @@ public class PausedMenu : MonoBehaviour
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
         first.playerCanMove = true;
+        first.enableJump = true;
         pauseMenu.SetActive(false);
     }
 }

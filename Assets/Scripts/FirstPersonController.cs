@@ -96,6 +96,7 @@ public class FirstPersonController : MonoBehaviour
 
     public bool enableJump = true;
     public KeyCode jumpKey = KeyCode.Space;
+    public KeyCode jumpKeyGamepad = KeyCode.JoystickButton0;
     public float jumpPower = 5f;
 
     // Internal Variables
@@ -326,7 +327,7 @@ public class FirstPersonController : MonoBehaviour
         #region Jump
 
         // Gets input and calls jump method
-        if(enableJump && Input.GetKeyDown(jumpKey) && isGrounded)
+        if(enableJump && Input.GetButtonDown("Jump") && isGrounded)
         {
             Jump();
         }
