@@ -20,6 +20,6 @@ public class PauseMenuButtons : MonoBehaviour
     }
     public void MainMenu()
     {
-        Debug.Log("Wracam do głównego menu");
+        SceneManager.LoadScene(0);
     }
 }

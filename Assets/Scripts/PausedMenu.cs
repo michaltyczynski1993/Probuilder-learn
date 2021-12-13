@@ -45,8 +45,9 @@ public class PausedMenu : MonoBehaviour
         first.crosshair = true;
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
+        pauseMenu.SetActive(false);
         first.playerCanMove = true;
         first.enableJump = true;
-        pauseMenu.SetActive(false);
+        isPaused = false;
     }
 }
