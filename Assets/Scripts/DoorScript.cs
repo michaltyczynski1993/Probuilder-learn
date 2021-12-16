@@ -6,10 +6,12 @@ public class DoorScript : MonoBehaviour
 {
     private BoxCollider colTrigger;
     private Animator anim;
+    private AudioSource openAudio;
     void Start()
     {
         colTrigger = GetComponent<BoxCollider>();
         anim = GetComponent<Animator>();
+        openAudio = GetComponent<AudioSource>();
     }
     private void Update() 
     {
