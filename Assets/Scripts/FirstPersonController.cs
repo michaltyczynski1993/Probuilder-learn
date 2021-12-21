@@ -83,6 +83,7 @@ public class FirstPersonController : MonoBehaviour
 
     // Internal Variables
     private CanvasGroup sprintBarCG;
+    private AudioSource audioSource;
     private bool isSprinting = false;
     private float sprintRemaining;
     private float sprintBarWidth;
@@ -134,6 +135,7 @@ public class FirstPersonController : MonoBehaviour
 
     private void Awake()
     {
+        audioSource = GetComponent<AudioSource>();
         rb = GetComponent<Rigidbody>();
 
         crosshairObject = GetComponentInChildren<Image>();
@@ -438,7 +440,18 @@ public class FirstPersonController : MonoBehaviour
                 rb.AddForce(velocityChange, ForceMode.VelocityChange);
             }
         }
+        if (isWalking)
+        {
+            if ( Input.GetButtonDown( "Horizontal" ) || Input.GetButtonDown( "Vertical" ) )
+        {
+            audioSource.Play();
+        }
 
+        else if ( !Input.GetButton( "Horizontal" ) && !Input.GetButton( "Vertical" ) && audioSource.isPlaying )
+        {
+            audioSource.Stop();
+        }
+        }
         #endregion
     }
 
