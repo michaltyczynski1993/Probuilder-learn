@@ -19,7 +19,7 @@ public class GameControl : MonoBehaviour
     void Start()
     {
         isKeyCollected = false;
-        StartCoroutine(HideAfterTime(3, objectiveText));
+        StartCoroutine(HideAfterTime(8, objectiveText));
     }
     IEnumerator HideAfterTime(int seconds, GameObject obj)
     {
