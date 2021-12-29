@@ -26,5 +26,5 @@ public class GameControl : MonoBehaviour
         yield return new WaitForSeconds(seconds);
         obj.SetActive(false);
     }
-   
+
 }
